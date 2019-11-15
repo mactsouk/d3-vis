@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>D3 World Map</title>
+    <title>D3 Spatial Data Visualization</title>
     <style>
       path {
         stroke: white;
@@ -23,7 +23,6 @@
 
   <body>
     <script type="text/javascript">
-
 		var width = 1000;
 		var height = 800;
 
@@ -38,13 +37,12 @@
 
 		var path = d3.geoPath()
 		   .projection(projection);
-		   
+
 		   var svg = d3.select("#map").append("svg")
 	       	.attr("width", width)
 			.attr("height", height);
 
 		   var g = svg.append("g");
-		   
 
 		d3.json("https://raw.githubusercontent.com/mactsouk/datasets/master/data.json")
 			.then(data => {
@@ -69,8 +67,7 @@
 			     ]) + ")";
 			   });
 
-			}).catch(error => console.log(error));
-	  
+			}).catch(error => console.log(error));	  
     </script>
   </body>
 
